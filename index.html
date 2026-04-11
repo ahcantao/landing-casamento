@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nínive & Adriano - Nosso Casamento está em Obras!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Integrado */
+        :root {
+            --terracotta-main: #B66B59; /* Cor principal terracota */
+            --terracotta-dark: #8C4F3F;
+            --terracotta-light: #F4E8E2;
+            --cream: #FFFDF9;
+            --gold: #E2BC74;
+            --text-dark: #3A302A;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--terracotta-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 960px;
+            width: 100%;
+            background-color: var(--cream);
+            padding-top: 0px;
+			padding-bottom: 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            text-align: center;
+            margin: 20px;
+        }
+
+        header h1 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--terracotta-main);
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+            color: var(--terracotta-dark);
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px; /* Ajuste para não ocupar a tela toda */
+            object-fit: contain;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding: 0 30px;
+        }
+
+        .content h2 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--terracotta-dark);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--terracotta-main);
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--terracotta-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-cta:active {
+            transform: translateY(1px);
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: var(--terracotta-dark);
+            border-top: 1px solid rgba(140, 79, 63, 0.2);
+            padding-top: 20px;
+        }
+
+        /* Responsividade para Dispositivos Móveis */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                border-radius: 20px;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .content h2 {
+                font-size: 1.8rem;
+            }
+            .content p {
+                font-size: 1rem;
+            }
+            .main-image {
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Nínive & Adriano</h1>
+            <p>Nosso Grande Dia está Chegando!</p>
+        </header>
+        <main>
+            <img src="ninive_adriano_construcao.png" alt="Desenho animado 2D de Nínive e Adriano trabalhando em um canteiro de obras de casamento com guindaste e bolo, em paleta terracota." class="main-image">
+            <div class="content">
+                <h2>O Grande Dia Está em Obras!</h2>
+                <p>Olá, queridos amigos e familiares! Estamos super empolgados para celebrar nosso amor com vocês. Mas, para que tudo seja perfeito (e não uma festa de pijama improvisada), nossos arquitetos de eventos estão trabalhando duro para finalizar os detalhes. Estamos polindo o bolo, costurando o vestido e caçando os convites. Aguardem novidades, porque vai valer a pena!</p>
+                
+				<button class="btn-cta" onclick="mensagem()">Clique aqui enquanto isso</button>
+				
+				<p id="msg"></p>
+            </div>
+        </main>
+        <footer>
+            &copy; 2026 Nínive e Adriano. <br> Feito com muito amor, animais, plantas, tecidos e café.
+        </footer>
+    </div>
+	<script>
+    function mensagem() {
+      const frases = [
+        "Calma, o site sai antes do casamento 😄",
+        "Adriano disse que já terminou... (não terminou tudo)",
+        "Nínive aprovou 3 cores... e rejeitou 12 😅",
+        "O site ficará no ar em breve! (após mais algumas xícaras de café)",
+        "Se você está vendo isso, o site ainda não está pronto mesmo 😆"
+      ];
+
+      const random = Math.floor(Math.random() * frases.length);
+      document.getElementById("msg").innerText = frases[random];
+    }
+  </script>
+</body>
+</html>
